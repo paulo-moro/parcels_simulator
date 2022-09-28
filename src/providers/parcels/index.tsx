@@ -12,8 +12,8 @@ export interface Ichildrentype {
 }
 
 interface ParcelsProviderData {
-  parcels: number;
-  setParcels: Dispatch<SetStateAction<number>>;
+  parcels: string;
+  setParcels: Dispatch<SetStateAction<string>>;
 }
 
 export const parcelsContext = createContext<ParcelsProviderData>(
@@ -21,7 +21,7 @@ export const parcelsContext = createContext<ParcelsProviderData>(
 );
 
 export const ParcelsProvider = ({ children }: Ichildrentype) => {
-  const [parcels, setParcels] = useState<number>(0);
+  const [parcels, setParcels] = useState<string>("");
 
   return (
     <parcelsContext.Provider value={{ parcels, setParcels }}>

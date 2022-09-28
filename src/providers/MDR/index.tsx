@@ -12,14 +12,14 @@ export interface Ichildrentype {
 }
 
 interface MDRProviderData {
-  mdr: number;
-  setMDR: Dispatch<SetStateAction<number>>;
+  mdr: string;
+  setMDR: Dispatch<SetStateAction<string>>;
 }
 
 export const mdrContext = createContext<MDRProviderData>({} as MDRProviderData);
 
 export const MDRProvider = ({ children }: Ichildrentype) => {
-  const [mdr, setMDR] = useState<number>(0);
+  const [mdr, setMDR] = useState<string>("");
 
   return (
     <mdrContext.Provider value={{ mdr, setMDR }}>

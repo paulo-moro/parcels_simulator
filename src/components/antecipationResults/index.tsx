@@ -4,15 +4,25 @@ import { StyledResultsContainer } from "./style";
 const AntecipationResults = () => {
   return (
     <StyledResultsContainer>
-      <div className="results__container">
-        <h2>Você Receberá</h2>
-        <Result>Amanhã: R$ {}</Result>
+      <div className="elements__align">
+        <h2>VOCÊ RECEBERÁ:</h2>
+        <div className="results__container">
+          <Result>
+            Amanhã: <span>R$ 0,00</span>
+          </Result>
 
-        <Result>Em 15 dias: R$ {}</Result>
+          <Result>
+            Em 15 dias: <span>R$ 0,00</span>
+          </Result>
 
-        <Result>Em 30 dias: R$ {}</Result>
+          <Result>
+            Em 30 dias: <span>R$ 0,00</span>
+          </Result>
 
-        <Result>Em 90 dias: R$ {}</Result>
+          <Result>
+            Em 90 dias: <span>R$ 0,00</span>
+          </Result>
+        </div>
       </div>
     </StyledResultsContainer>
   );
