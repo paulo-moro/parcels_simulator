@@ -12,8 +12,8 @@ export interface Ichildrentype {
 }
 
 interface SellProviderData {
-  sell: number;
-  setSell: Dispatch<SetStateAction<number>>;
+  sell: string;
+  setSell: Dispatch<SetStateAction<string>>;
 }
 
 export const sellContext = createContext<SellProviderData>(
@@ -21,7 +21,7 @@ export const sellContext = createContext<SellProviderData>(
 );
 
 export const SellProvider = ({ children }: Ichildrentype) => {
-  const [sell, setSell] = useState<number>(0);
+  const [sell, setSell] = useState<string>("");
 
   return (
     <sellContext.Provider value={{ sell, setSell }}>
