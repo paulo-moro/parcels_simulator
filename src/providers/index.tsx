@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
-import { MDRProvider } from "./MDR";
-import { ParcelsProvider } from "./parcels";
-import { SellProvider } from "./sell";
+import { RequestProvider } from "./requestData";
+import { ResultProvider } from "./results";
 
 export interface Ichildrentype {
   children: ReactNode;
@@ -10,11 +9,9 @@ export interface Ichildrentype {
 const Provider = ({ children }: Ichildrentype) => {
   return (
     <>
-      <MDRProvider>
-        <ParcelsProvider>
-          <SellProvider>{children}</SellProvider>
-        </ParcelsProvider>
-      </MDRProvider>
+      <RequestProvider>
+        <ResultProvider>{children}</ResultProvider>
+      </RequestProvider>
     </>
   );
 };
